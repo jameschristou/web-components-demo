@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>2. Advanced HTML Templates</title>
+        <style>
+          body{
+            color: darkslategray;
+          }
+        </style>
+    </head>
+    <body>
+      <ul id='skills-list' class="skills-list"></ul>
+
+      <!-- our template for each skill item -->
+      <template id="list-item-template">
+        
+        <!-- this style is copied inline along with the HTML -->
+        <style>
+          .skills-list{
+            list-style-type: none;
+            padding:0;
+            margin:0;
+          }
+
+          .skills-list .item{
+            margin:0;
+            width: 200px;
+            padding:10px;
+          }
+
+          .skills-list .item:hover{
+            background-color: lightgray;
+          }
+
+          .skills-list .item .item__name{
+            font-weight:700;
+          }
+
+          .skills-list .item .item__value{
+            float:right;
+            width: 50px;
+          }
+        </style>
+
+        <li class="item"><span class="item__name"></span><span class="item__value"></span></li>
+      </template>
+    </body>
+
+    <script>
+      const templateElement = document.getElementById('list-item-template');
+      const skillsListNode = document.getElementById('skills-list');
+
+      // our list of skills and the number of users
+      const skills = [
+        { name: 'C#', count: 188 },
+        { name: 'Javascript', count: 140 },
+        { name: 'Angular', count: 89 },
+        { name: 'React', count: 65 },
+        { name: 'SQL', count: 145 },
+        { name: 'AWS', count: 200 },
+        { name: 'ASP.NET Core', count: 120 },
+        { name: 'Node.js', count: 98 }
+      ];
+
+      skills.forEach(skill => {
+        // Create an instance of the template content
+        const node = document.importNode(templateElement.content, true);
+
+        // Add relevant content to the template
+        node.querySelector('.item__name').innerHTML = skill.name;
+        node.querySelector('.item__value').innerHTML = skill.count;
+
+        // Append the instance to the DOM
+        skillsListNode.appendChild(node);
+      });
+    </script>
+</html>

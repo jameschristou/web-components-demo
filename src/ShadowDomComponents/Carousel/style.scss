@@ -1,0 +1,9 @@
+::slotted(*){
+    width: 200px;
+    display: inline-block;
+    margin-right:10px;
+
+    &:last-child{
+        margin:0;
+    }
+}

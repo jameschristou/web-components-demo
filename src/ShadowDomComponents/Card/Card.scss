@@ -1,0 +1,46 @@
+:host{
+    display:block;
+    border-radius: 8px;
+    overflow:hidden;
+    max-width:400px;
+    width:100%;
+    background-color: var(--theme-button-colour);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+:host(:hover){
+    box-shadow: 5px 5px 10px gray;
+}
+
+::slotted(*){
+    width:100%;
+}
+
+slot[name="title"] { 
+    font-size:20px;
+    margin-bottom: 10px;
+    display:block;
+}
+
+slot[name="content"] { 
+    font-size:20px;
+}
+
+.heading{
+    padding: 10px;
+}
+
+.content{
+    padding: 12px 12px 15px 12px;
+}
+
+.summary{
+    font-size: 12px;
+    padding: 10px;
+    background-color: var(--theme-button-colour);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}

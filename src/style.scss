@@ -1,0 +1,38 @@
+body{
+    // theming using css custom properties. These can be accessed by the shadow dom on a web component
+    --theme-button-colour: #29abe2;
+
+    font-family: sans-serif;
+}
+
+.test-carousel{
+    margin:10px 0;
+    display: inline-block;
+
+    // the following style will not work because we are using shadow dom for this custom element
+    & shadow-card{
+        width: 100px;
+    }
+}
+
+my-card{
+    // using this, I can override the slot styling since the summary lives in light dom
+    .summary{
+        font-size:13px;
+    }
+}
+
+my-textfield{
+    &.with-border{
+        width: 500px;
+    }
+}
+
+editable-textfield{
+    width: 500px;
+    display: block;
+}
+
+.disabled{
+    color: grey;
+}

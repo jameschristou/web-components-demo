@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>1. Basic HTML Templates</title>
+    </head>
+    <body>
+      <template id="my-template">
+        <style>
+          .template-row{
+            margin:15px 0;
+          }
+
+          .template-row__property{
+            font-weight:700;
+          }
+        </style>
+        <div class='template-row'>
+          <span class='template-row__property'>Template Name:</span><span>My Template</span>
+        </div>
+        <div class='template-row'>
+          <span class='template-row__property'>Created By:</span><span>Jimmy</span>
+        </div>
+      </template>
+    </body>
+    <script>
+      const template = document.getElementById('my-template');
+
+      document.body.appendChild(
+        document.importNode(template.content, true)
+      );
+
+      document.body.appendChild(
+        document.importNode(template.content, true)
+      );
+    </script>
+</html>
