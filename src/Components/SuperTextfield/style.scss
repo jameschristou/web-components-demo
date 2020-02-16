@@ -2,8 +2,8 @@ $textfield-color-hover:  lightblue;
 $action-color:  gainsboro;
 $action-color-hover: darken($action-color, 8%);
 
-.editableTextfieldContainer{
-    .editableTextfield{
+.superTextfieldContainer{
+    .superTextfield{
         padding: 10px;
         border-radius: 4px;
         background-color: lighten($textfield-color-hover, 15%);
@@ -11,7 +11,7 @@ $action-color-hover: darken($action-color, 8%);
         box-sizing: border-box;
         border: none;
     
-        &:hover{
+        &:not([disabled]):hover{
             background-color: $textfield-color-hover;
         }
 
@@ -20,16 +20,16 @@ $action-color-hover: darken($action-color, 8%);
         }
     }
 
-    .editableTextfieldActionsContainer{
+    .superTextfieldActionsContainer{
         position: relative;
 
-        .editableTextfieldActions{
+        .superTextfieldActions{
             position:absolute;
             right: 0px;
             top: 4px;
 
-            .editableTextfieldAction__save,
-            .editableTextfieldAction__cancel{
+            .superTextfieldAction__save,
+            .superTextfieldAction__cancel{
                 font-weight: 700;
                 border: 1px solid $action-color-hover;
                 width: 35px;

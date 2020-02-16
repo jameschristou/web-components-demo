@@ -1,7 +1,10 @@
-import MyTextfield from './ShadowDomComponents/MyTextfield/MyTextfield';
-import EditableTextfield from './EditableTextfield/EditableTextfield';
-import Card from './ShadowDomComponents/Card/Card';
-import Carousel from './ShadowDomComponents/Carousel/Carousel';
-import CardTitle from './ShadowDomComponents/Card/CardTitle';
-import HelloWorld from './Components/HelloWorld';
+require('./Components/HelloWorld');
+require('./Components/SuperTextfield/SuperTextfield');
+require('./Components/Card/Card');
+
+require('./ShadowDomComponents/MyTextfield/MyTextfield');
+require('./ShadowDomComponents/Card/Card');
+require('./ShadowDomComponents/Carousel/Carousel');
+require('./ShadowDomComponents/Card/CardTitle');
+
 import './style.scss';

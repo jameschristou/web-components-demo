@@ -33,6 +33,7 @@ editable-textfield{
     display: block;
 }
 
-.disabled{
+.disabled,
+:disabled{
     color: grey;
 }

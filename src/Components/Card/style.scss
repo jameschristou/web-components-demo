@@ -1,0 +1,40 @@
+custom-card{
+    display:block;
+    border-radius: 8px;
+    overflow:hidden;
+    max-width:450px;
+    width:100%;
+    background-color: var(--theme-button-colour);
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 10px;
+
+    &:hover{
+        box-shadow: 5px 5px 10px gray;
+    }
+
+    .card__content{
+        padding: 15px 15px 20px 15px;
+    }
+
+    .card__title{
+        font-size:20px;
+        margin-bottom: 10px;
+        display:block;
+        margin: 0 0 10px;
+    }
+
+    .card__summary{
+        margin: 0;
+    }
+
+    .card__image{
+        img{
+            width:100%;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
