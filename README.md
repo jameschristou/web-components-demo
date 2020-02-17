@@ -26,11 +26,11 @@ Webpack dev server is configured to load index.js (which includes all the web co
 * Show how we add event handlers in the custom element constructor
 * Show that adding another copy of the element does not interfere with event handling
 
-### 5. Composition of Custom Elements
-`index5.html`: Showcases how basic composition can work
-
-### 6. Basic use of Shadow DOM
+### 5. Basic use of Shadow DOM
 `index6.html`: Creates a HelloWorld custom element using Shadow DOM
+
+### 6. Composition of Custom Elements
+`index6.html`: Showcases how basic composition can work
 
 ### 7. Advanced use of Shadow DOM
 `index7.html`: Creates a fancy textbox using Shadow DOM.
