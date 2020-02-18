@@ -16,6 +16,6 @@ class Carousel extends HTMLElement {
   }
 }
 
-customElements.define('my-carousel', Carousel);
+customElements.define('shadow-carousel', Carousel);
 
 export default Carousel;

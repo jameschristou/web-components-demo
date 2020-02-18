@@ -5,8 +5,7 @@ componentSheet.replaceSync(styleText);
 
 class Card extends HTMLElement {
   constructor() {
-    super(); // always call super() first in the constructor.
-    this._href = "";
+    super();
 
     this.attachShadow({mode: 'open'});
     this.shadowRoot.adoptedStyleSheets = [componentSheet];
@@ -28,21 +27,20 @@ class Card extends HTMLElement {
   }
   
   get href(){
-		return this._href;
+		return this.getAttribute('href');
 	}
 
 	set href(val){
-		this.setAttribute('href', val);
+    this.setAttribute('href', val);
   }
   
-  attributeChangedCallback(name, oldVal, newVal){
-    if(name == 'href'){
-      this.shadowRoot.getElementById('content-link').href = newVal;
-      this._href = newVal;
+  attributeChangedCallback(attrName, oldValue, newValue) {
+    if (newValue !== oldValue) {
+      this[attrName] = newValue;
     }
-	}
+  }
 }
 
-customElements.define('my-card', Card);
+customElements.define('shadow-card', Card);
 
 export default Card;

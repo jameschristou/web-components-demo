@@ -3,22 +3,26 @@ body{
     --theme-button-colour: #29abe2;
 
     font-family: sans-serif;
+    color: darkslategray;
 }
 
-.test-carousel{
+shadow-carousel{
     margin:10px 0;
     display: inline-block;
 
-    // the following style will not work because we are using shadow dom for this custom element
-    & shadow-card{
-        width: 100px;
+    shadow-card{
+        width: 240px;
     }
 }
 
-my-card{
+shadow-card{
     // using this, I can override the slot styling since the summary lives in light dom
-    .summary{
-        font-size:13px;
+    .card__summary{
+        font-size:14px;
+    }
+
+    .card__title{
+        margin: 0 0 10px 0;
     }
 }
 
@@ -26,11 +30,6 @@ my-textfield{
     &.with-border{
         width: 500px;
     }
-}
-
-editable-textfield{
-    width: 500px;
-    display: block;
 }
 
 .disabled,

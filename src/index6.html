@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Composition with Custom Elements</title>
-    </head>
-    <body>
-      <hello-world-shadow></hello-world-shadow>
-      <hello-world-shadow name="James"></hello-world-shadow>
-    </body>
-
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Composition with Shadow DOM Using Slots</title>
+  </head>
+  <body>
+    <shadow-carousel>
+      <shadow-card href='/editorial/details/blah/'>
+        <img slot="gallery" class="gallery-image" src="https://editorial.pxcrush.net/carsales/general/editorial/2020nissangt-rnismowakefieldpark00001.jpg?width=480&amp;height=320&amp;pxc_method=crop"/>
+        <h3 class="card__title" slot="title">Nissan GT-R NISMO 2020 Review</h3>
+        <p class="card__summary" slot="content">Missile-like Nissan GT-R NISMO is now more berserk (and expensive) than ever</p>
+      </shadow-card>
+      <shadow-card href='/editorial/details/blah/'>
+        <img slot="gallery" class="gallery-image" src="https://editorial.pxcrush.net/carsales/general/editorial/2020-porsche-911-carrera_0117.jpg?width=480&amp;height=320&amp;pxc_method=crop"/>
+        <h3 class="card__title" slot="title">Porsche 911 Carrera 2020 Review</h3>
+        <p class="card__summary" slot="content">The latest Porsche 911 derivative has arrived and it’s pretty darn good</p>
+      </shadow-card>
+    </shadow-carousel>
+  </body>
 </html>

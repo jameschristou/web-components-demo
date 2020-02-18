@@ -52,6 +52,13 @@ class SuperTextfield extends HTMLElement {
     };
   }
 
+  connectedCallback() {
+    this._textinput.value = this.value;
+    this._savedValue = this.value;
+
+    this.appendChild(this._clonedNode);
+  }
+
   static get observedAttributes() {
     return ['disabled', 'value'];
   }
@@ -90,13 +97,6 @@ class SuperTextfield extends HTMLElement {
 
   textfieldClickHandler(event){
     console.log("click handler fired");
-  }
-
-  connectedCallback() {
-    this._textinput.value = this.value;
-    this._savedValue = this.value;
-
-    this.appendChild(this._clonedNode);
   }
 
   saveCurrentEdit(){

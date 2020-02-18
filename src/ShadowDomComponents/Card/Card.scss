@@ -4,8 +4,8 @@
     overflow:hidden;
     max-width:400px;
     width:100%;
-    background-color: var(--theme-button-colour);
     transition: box-shadow 0.3s ease-in-out;
+    background-color: var(--theme-button-colour);
 }
 
 :host(:hover){
@@ -16,10 +16,11 @@
     width:100%;
 }
 
+// you can only style the slot itself, not the slotted elements although they will inherit
+// styles from this rule
 slot[name="title"] { 
-    font-size:20px;
-    margin-bottom: 10px;
     display:block;
+    font-size:16px;
 }
 
 slot[name="content"] { 
@@ -31,13 +32,7 @@ slot[name="content"] {
 }
 
 .content{
-    padding: 12px 12px 15px 12px;
-}
-
-.summary{
-    font-size: 12px;
-    padding: 10px;
-    background-color: var(--theme-button-colour);
+    padding: 12px 12px 15px;
 }
 
 a{

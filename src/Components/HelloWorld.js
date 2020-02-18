@@ -3,7 +3,7 @@ template.innerHTML = `<div class="hello">Hello World</div>`;
 
 class HelloWorld extends HTMLElement {
   /*
-  This callback is fired when the element is added to the DOM. You defer the work of rendering the component
+  This lifecycle callback is fired when the element is added to the DOM. You defer the work of rendering the component
   until this point.
   */
   connectedCallback(){
@@ -30,6 +30,20 @@ class HelloWorld extends HTMLElement {
     if (newValue !== oldValue) {
       this[attrName] = newValue;
     }
+  }
+
+  /*
+  This lifecycle callback is fired when the element is removed from the DOM
+  */
+  disconnectedCallback() {
+    // put clean up logic here
+  }
+
+  /*
+  This lifecycle callback is firec when the element is adopted into another document i.e. document.adoptNode(element)
+  */
+  adoptedCallback() {
+    
   }
 
   // attribute property reflection
