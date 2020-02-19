@@ -5,6 +5,7 @@
     max-width:400px;
     width:100%;
     transition: box-shadow 0.3s ease-in-out;
+    // using the custom property defined in the parent page
     background-color: var(--theme-button-colour);
 }
 

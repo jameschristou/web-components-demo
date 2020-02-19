@@ -5,9 +5,11 @@
         <title>Advanced use of Custom Element</title>
 
         <style>
-          super-textfield{
-            max-width:500px;
-            display:block;
+          super-textfield:not(:defined) {
+            display: block;
+            height: 100vh;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
           }
         </style>
     </head>

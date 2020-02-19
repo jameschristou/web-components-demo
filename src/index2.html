@@ -3,8 +3,51 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Basic use of Custom Element</title>
+
+        <!-- <style>
+          /* use these styles to target element before it is upgraded
+          */
+          hello-world:not(:defined) {
+            display: block;
+            height: 40px;
+            background-color: lightsteelblue;
+          }
+
+          hello-world:not(:defined) .loading{
+            display: inline;
+          }
+        </style> -->
+
+        <style>
+          hello-world{
+            background-color: lightsteelblue;
+            display:block;
+            padding:10px;
+            box-sizing: border-box;
+            /* you can prevent layout shifting by setting a fixed height*/
+            height: 40px;
+          }
+
+          hello-world .loading{
+            display: none;
+          }
+
+          hello-world .hello{
+            display:block;
+          }
+
+          p{
+            background-color:lightgray;
+            padding: 10px;
+            margin: 0;
+          }
+        </style>
     </head>
     <body>
-      <hello-world name='James'></hello-world>
+      <!-- <p>Content before our custom element</p> -->
+      <hello-world name='James'>
+        <!-- <span class="loading">Loading....</span> -->
+      </hello-world>
+      <!-- <p>Content after our custom element</p> -->
     </body>
 </html>

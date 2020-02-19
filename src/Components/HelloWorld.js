@@ -13,7 +13,7 @@ class HelloWorld extends HTMLElement {
       clonedNode.firstChild.innerHTML = `Hello ${this.name}`;
     }
 
-    this.appendChild(clonedNode);
+    this.appendChild(clonedNode)
   }
 
   /*
@@ -43,7 +43,7 @@ class HelloWorld extends HTMLElement {
   This lifecycle callback is firec when the element is adopted into another document i.e. document.adoptNode(element)
   */
   adoptedCallback() {
-    
+
   }
 
   // attribute property reflection
@@ -54,10 +54,12 @@ class HelloWorld extends HTMLElement {
   set name(val) {
     if(val) {
       this.setAttribute('name', val);
+      // update component content as name changes!
       //this.firstChild.innerHTML = `Hello ${this.name}`;
     }
     else {
       this.removeAttribute('name');
+      // update component content as name changes!
       //this.firstChild.innerHTML = "Hello World";
     }
   }

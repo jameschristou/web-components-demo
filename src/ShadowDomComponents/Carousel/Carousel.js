@@ -1,5 +1,7 @@
 import styleText from './style.scss';
 
+// using constructable style sheets...import the compiled sass as a string
+// currently only natively supported in Chrome but there are polyfills
 const componentSheet = new CSSStyleSheet();
 componentSheet.replaceSync(styleText);
 
